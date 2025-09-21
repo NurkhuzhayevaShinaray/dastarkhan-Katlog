@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dastarkhan - Авторизация</title>
+  <link rel="stylesheet" href="styleNurislam.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/photo_5359674248727231556_m.jpg" alt="Логотип">
+      <h1>Dastarkhan</h1>
+    </div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="discounts.html">Скидки</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="questions.html">Вопросы</a>
+      <a href="auth.html">Авторизация</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="auth-container">
+      <div class="user-icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <h2>Регистрация</h2>
+      <form class="auth-form">
+        <label for="reg-username">Имя пользователя</label>
+        <input type="text" id="reg-username" name="reg-username" required>
+
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="reg-email" required>
+
+        <label for="reg-password">Пароль</label>
+        <input type="password" id="reg-password" name="reg-password" required>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+      <h2>Вход</h2>
+      <form class="auth-form">
+        <label for="login-username">Имя пользователя</label>
+        <input type="text" id="login-username" name="login-username" required>
+
+        <label for="login-password">Пароль</label>
+        <input type="password" id="login-password" name="login-password" required>
+
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
+  </footer>
+</body>
+</html>
