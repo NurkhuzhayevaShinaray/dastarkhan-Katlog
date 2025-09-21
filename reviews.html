@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Dastarkhan - Отзывы</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        background-image:url(img/5357083477209642800.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    main h2 {
+      color: green;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+
+    .rating {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #FFD700;
+    }
+
+    .review-form {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .review-form input, .review-form textarea, .review-form select {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+    }
+
+    .review-form button {
+      background:#4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .reviews-list {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 250px;
+      border-radius: 10px;
+      
+    }
+
+ 
+
+    .review-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .stars {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="C:\Users\aidos\Downloads\5359674248727231556 (1).jpg" alt="Логотип">
+      <h1>Dastarkhan</h1>
+    </div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="discounts.html">Скидки</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="questions.html">Вопросы</a>
+      <a href="auth.html">Авторизация</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Отзывы клиентов</h2>
+
+    <div class="rating">
+      ⭐⭐⭐⭐☆ (4.5 из 5)
+    </div>
+
+    <div class="review-form">
+      <div style="background: #4CAF50;color: white;padding: 5px 15px; border-radius: 8px;margin-top: 10px;">
+      <h3>Оставить отзыв</h3>
+      </div>
+      <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <select>
+          <option>⭐</option>
+          <option>⭐⭐</option>
+          <option>⭐⭐⭐</option>
+          <option>⭐⭐⭐⭐</option>
+          <option>⭐⭐⭐⭐⭐</option>
+        </select>
+        <textarea rows="4" placeholder="Ваш отзыв..." required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+    
+    <h3>Отзывы других клиентов</h3>
+  
+    <div class="reviews-list">
+      <div class="review-card">
+        <h3>Акниет</h3>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>Очень довольна качеством продуктов и быстрой доставкой!</p>
+      </div>
+
+
+
+      <div class="review-card">
+        <h3>Максат</h3>
+        <p class="stars">⭐⭐⭐⭐</p>
+        <p>Товары свежие, курьер приехал вовремя.</p>
+      </div>
+
+      <div class="review-card">
+        <h3>Арман</h3>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>Очень удобно заказывать, буду пользоваться постоянно!</p>
+</div>
+      <div class="review-card">
+        <h3>Айдос</h3>
+        <p class="stars">⭐</p>
+        <p>ыы</p>
+
+      
+      </div>
+    </div>
+  </main>
+  
+
+  <footer>
+    <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
+  </footer>
+</body>
+</html>
