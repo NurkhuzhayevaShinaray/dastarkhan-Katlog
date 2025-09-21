@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+margin: 0;
   font-family: Arial, sans-serif;
   background: #f2f2f2;
 }
@@ -46,7 +46,7 @@ main {
 }
 
 footer {
-  background: green;
+  background: #333;
   color: white;
   text-align: center;
   padding: 10px;
@@ -55,13 +55,4 @@ footer {
 input, button {
   margin: 5px;
   padding: 8px;
-}
-
-.faq h3 {
-  color: green;
-  margin-top: 20px;
-}
-
-.faq p {
-  margin-bottom: 15px;
 }
