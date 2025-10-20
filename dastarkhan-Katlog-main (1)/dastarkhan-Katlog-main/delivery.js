@@ -24,7 +24,7 @@ document.getElementById("deliveryForm").addEventListener("submit", function (eve
   }
 });
 //a
-
+//a
 
 
 const sumInput = document.getElementById("sum");

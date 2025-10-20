@@ -15,7 +15,7 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
     <p>${text}</p>
   `;
 //a
- 
+//a
   const list = document.getElementById("reviewsslist");
   list.appendChild(card);
 
