@@ -55,12 +55,16 @@
     justify-content: space-between;
     align-items: center;
     }
+    
+
+    
 
 
 
 
   </style>
 </head>
+
 
 <body>
   <header>
@@ -82,7 +86,7 @@
 
   <main>
     <div class="content-wrapper">
-  <!-- САЙДБАР ДЛЯ СТРАНИЦЫ DELIVERY -->
+  
   <aside class="sidebar">
     <h3>Полезная информация</h3>
     <ul>
@@ -141,7 +145,7 @@
   
   
 
-  </div>
+  </div> 
 
   <h2>Стоимость доставки</h2>
   <table border="1" cellpadding="8" cellspacing="0" class="delivery-table">
@@ -176,10 +180,44 @@
   <p><strong>Как проверить статус заказа?</strong>  
   Наш менеджер свяжется с вами по телефону или вы получите SMS-уведомление.</p>
 
+
+  <h2>Оформить доставку</h2>
+  <Form id="deliveryForm">
+    <label for="name">Имя:</label>
+     <input type="text" id="name" placeholder="Введите имя">
+
+     <label for="phone">Телефон:</label>
+     <input type="text" id="phone" placeholder="+7 700 000 0000">
+
+     <label for="address">Адрес:</label>
+     <input type="text" id="address" placeholder="Город, улица, дом">
+
+     <label for="email">Email:</label>
+     <input type="text" id="email" placeholder="example@gmail.com">
+
+     <button type="submit">Отправить заказ</button>
+  </Form>
+
+  <p id="message"></p>
+
+
+
+<label for="sum">Сумма заказа (₸):</label>
+<input type="number" id="sum" placeholder="Введите сумму">
+<p id="cost"></p> 
+//a
+
+//a
+
+
+
 </main>
   <footer>
     <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
   </footer>
+  <script src="delivery.js"></script>
+
+
 
 </body>
 </html>
