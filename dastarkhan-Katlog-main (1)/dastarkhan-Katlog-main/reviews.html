@@ -107,9 +107,9 @@
       <div style="background: #4CAF50;color: white;padding: 5px 15px; border-radius: 8px;margin-top: 10px;">
       <h3>Оставить отзыв</h3>
       </div>
-      <form>
+      <form id="reviewForm">
         <input type="text" placeholder="Ваше имя" required>
-        <select>
+        <select id="rating">
           <option>⭐</option>
           <option>⭐⭐</option>
           <option>⭐⭐⭐</option>
@@ -124,7 +124,8 @@
     
     <h3>Отзывы других клиентов</h3>
   
-    <div class="reviews-list">
+    <div class="reviews-list" id="reviewsslist">
+
       <div class="review-card">
         <h3>Акниет</h3>
         <p class="stars">⭐⭐⭐⭐⭐</p>
@@ -158,5 +159,7 @@
   <footer>
     <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
   </footer>
+
+  <script src="reviews.js"></script>
 </body>
 </html>
