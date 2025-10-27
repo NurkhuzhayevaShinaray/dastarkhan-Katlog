@@ -12,6 +12,7 @@
       background-attachment: fixed;
       font-family: Arial, sans-serif;
       color: #fff;
+      transition: background-color 0.5s ease;
     }
     details {
       background: rgba(0, 0, 0, 0.6);
@@ -30,7 +31,80 @@
       width: 80px;
       height: 80px;
       border-radius: 15px;
+      transition: transform 0.3s ease;
     }
+    .icon:hover {
+      transform: scale(1.2);
+    }
+    .theme-toggle {
+      background-color: #ffd700;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px;
+      font-weight: bold;
+    }
+    .dark-mode {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+    #rating span {
+      font-size: 30px;
+      cursor: pointer;
+      color: gray;
+    }
+    #rating span.active {
+      color: gold;
+
+    
+    }
+
+    #playBtn {
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #playBtn:hover {
+      background-color: darkgreen;
+    }
+
+
+    #submitName {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Спиннер */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -55,49 +129,62 @@
 
   <main>
     <h2 style="text-align:center;">Часто задаваемые вопросы</h2>
+
+    <button class="theme-toggle" id="toggleTheme">Переключить тему</button>
+
     <div class="content-wrapper">
-  <!-- САЙДБАР ДЛЯ СТРАНИЦЫ QUESTIONS -->
-  <aside class="sidebar">
-    <h3>Помощь и поддержка</h3>
-    <ul>
-      <li><a href="#">Часто задаваемые вопросы</a></li>
-      <li><a href="#">Задать свой вопрос</a></li>
-      <li><a href="#">Контакты службы поддержки</a></li>
-      <li><a href="#">Политика возврата</a></li>
-    </ul>
-  </aside>
+      <aside class="sidebar">
+        <h3>Помощь и поддержка</h3>
+        <ul>
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Задать свой вопрос</a></li>
+          <li><a href="#">Контакты службы поддержки</a></li>
+          <li><a href="#">Политика возврата</a></li>
+        </ul>
+      </aside>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <div class="main-content">
+      <div class="main-content">
+        <details>
+          <summary>Как создать аккаунт?</summary>
+          <p>Нажмите кнопку «Регистрация» и заполните форму.</p>
+        </details>
 
-    
-    <details>
-      <summary>Как создать аккаунт?</summary>
-      <p>Нажмите кнопку «Регистрация» и заполните форму.</p>
-    </details>
+        <details>
+          <summary>Какие способы оплаты доступны?</summary>
+          <p>Мы принимаем банковские карты и электронные кошельки.</p>
+        </details>
 
-    <details>
-      <summary>Какие способы оплаты доступны?</summary>
-      <p>Мы принимаем банковские карты и электронные кошельки.</p>
-    </details>
+        <details>
+          <summary>Сколько занимает доставка?</summary>
+          <p>В среднем доставка занимает 1–2 рабочих часа.</p>
+        </details>
 
-    <details>
-      <summary>Сколько занимает доставка?</summary>
-      <p>В среднем доставка занимает 1-2 рабочих часов.</p>
-    </details>
+        <details>
+          <summary>Как вернуть товар?</summary>
+          <p>Вы можете вернуть товар в течение 14 дней при сохранении чека и упаковки.</p>
+        </details>
 
-    <details>
-      <summary>Как вернуть товар?</summary>
-      <p>Вы можете вернуть товар в течение 14 дней при сохранении чека и упаковки.</p>
-    </details>
+        <details>
+          <summary>Как связаться с поддержкой?</summary>
+          <p>Напишите нам на dastarkhan@gmail.com или позвоните по телефону +7 (747) 859-34-56.</p>
+        </details>
 
-    <details>
-      <summary>Как связаться с поддержкой?</summary>
-      <p>Напишите нам на dastarkhan@gmail.com или позвоните по телефону +7 (747) 859-34-56.</p>
-    </details>
+        <h3>Оцените наш сайт:</h3>
+        <div id="rating">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <div id="greetingSection">
+          <input type="text" id="nameInput" placeholder="Введите ваше имя">
+          <button id="submitName">Отправить</button>
+          <p id="greetingText"></p>
+        </div>
+
+        <button id="showTimeBtn">Показать время</button>
+        <p id="currentTime" style="color: #ffd700;"></p>
+
       </div>
-</div>
-
+    </div>
   </main>
 
   <center>
@@ -112,8 +199,16 @@
     </a>
   </center>
 
+
+  <button id="playBtn">Play Sound 🎵</button>
+
+
+  <div id="datetime" style="text-align:center; margin:20px; font-size:18px; font-weight:bold; color:#ffd700;"></div>
+
   <footer>
     <p>Made by the team: Nurislam, Shinaray, Aidos, Akerke</p>
   </footer>
+
+  <script src="Akerke.js"></script>
 </body>
 </html>
