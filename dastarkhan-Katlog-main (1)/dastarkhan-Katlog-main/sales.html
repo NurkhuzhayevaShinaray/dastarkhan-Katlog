@@ -2,8 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dastarkhan - Скидки</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -14,7 +17,7 @@
     <nav>
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
-      <a href="sales.html" class="active">Скидки</a>
+      <a href="sales.html">Скидки</a>
       <a href="Delivery.html">Доставка</a>
       <a href="reviews.html">Отзывы</a>
       <a href="contacts.html">Контакты</a>
@@ -25,11 +28,20 @@
 
   <main>
     <h2>Скидки и акции</h2>
-    <section>
-      <h2>🥗🍉 Фруктовые скидки недели</h2>
-      <div class="content-wrapper">
+    
+    <div class="subscribe-section">
+      <img src="img/banner.png" width="600px" height="auto">
+      <p>
+      <button id="subscribeBtn" class="subscribe-btn">
+        <i class="fas fa-bell"></i> Подписаться на больше скидок
+      </button> </p>
+      <div id="subscribeMessage" class="subscribe-message"></div>
+    </div>
+   
 
-      
+    <section>
+      <h2  style="display:flex; align-items:center">Фруктовые скидки недели</h2>
+      <div class="content-wrapper">
         <aside class="sidebar">
           <h3>Фильтр скидок</h3>
           <ul>
@@ -40,8 +52,7 @@
           </ul>
         </aside>
 
-      
-        <div class="main-content ">
+        <div class="main-content">
           <div class="sale-banner sale-orange">
             <div>
               <h3>Бананы -20%</h3>
@@ -83,7 +94,7 @@
         <h4>Набор для завтрака</h4>
         <p>Молоко + Хлеб + Сыр + Колбаса</p>
         <p class="price"><span class="old-price">3 850 KZT</span> 2 990 KZT</p>
-        <form>
+        <form class="product-form">
           <input type="number" min="1" value="1">
           <button>В корзину</button>
         </form>
@@ -93,19 +104,25 @@
         <h4>Семейный обед</h4>
         <p>Курица + Рис + Овощи + Хлеб</p>
         <p class="price"><span class="old-price">5 750 KZT</span> 4 590 KZT</p>
-        <form>
+        <form class="product-form">
           <input type="number" min="1" value="1">
           <button>В корзину</button>
         </form>
       </div>
     </div>
+
+    <div class="subscription-form-container">
+      <h3>Подпишитесь на уведомления о скидках</h3>
+      <div id="subscriptionForm" class="subscription-form">
+      </div>
+    </div>
+
+
   </main>
 
   <footer>
     <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
   </footer>
-
-
   <script src="C:\Users\Шынарай\OneDrive\web2\dastarkhan-Katlog\dastarkhan-Katlog-1\shinaray.js"></script>
 </body>
 </html>
