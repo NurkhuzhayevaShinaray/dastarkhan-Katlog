@@ -14,8 +14,7 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
     <p class="stars">${rating}</p>
     <p>${text}</p>
   `;
-//a
-//a
+
   const list = document.getElementById("reviewsslist");
   list.appendChild(card);
 
@@ -32,6 +31,7 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
   }, 50);
 
 });
+
 
 
 
