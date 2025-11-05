@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dastarkhan - Каталог</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -22,27 +24,48 @@
       <a href="questions.html">Вопросы</a>
       <a href="auth.html">Авторизация</a>
     </nav>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <main>
     <h2>Каталог продуктов</h2>
 
-    <div>
+    <div class="search-section">
       <h3>Поиск продуктов</h3>
-      <form>
+      <form class="search-form">
         <input type="text" id="searchInput" placeholder="Введите название продукта">
         <button type="button">Найти</button>
       </form>
+      
+      <div class="filter-section">
+        <h3>Фильтр продуктов</h3>
+        <div class="filter-controls">
+          <select id="categoryFilter">
+            <option value="all">Все категории</option>
+            <option value="fruits">Фрукты</option>
+            <option value="vegetables">Овощи</option>
+            <option value="dairy">Молочные</option>
+          </select>
+          <input type="number" id="priceFilter" placeholder="Макс. цена" value="2000">
+          <button id="applyFilter">Применить</button>
+        </div>
+      </div>
     </div>
+
     <h3>Фрукты</h3>
     <div class="products-container">
       <div class="product">
         <img src="img/banana.webp" alt="Бананы">
         <h4>Бананы</h4>
         <p class="price">1180 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -50,9 +73,12 @@
         <img src="img/oranges.jpg" alt="Апельсины">
         <h4>Апельсины</h4>
         <p class="price">1100 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -60,9 +86,12 @@
         <img src="img/watermelon.avif" alt="Арбузы">
         <h4>Арбузы</h4>
         <p class="price">880 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -70,9 +99,12 @@
         <img src="img/apples.jpg" alt="Яблоки">
         <h4>Яблоки</h4>
         <p class="price">850 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
     </div>
@@ -83,9 +115,12 @@
         <img src="img/огурцы.jpg" alt="Огурцы">
         <h4>Огурцы</h4>
         <p class="price">890 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -93,9 +128,12 @@
         <img src="img/помидоры.webp" alt="Помидоры">
         <h4>Помидоры</h4>
         <p class="price">950 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -103,9 +141,12 @@
         <img src="img/картофель.jpg" alt="Картофель">
         <h4>Картофель</h4>
         <p class="price">450 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -113,9 +154,12 @@
         <img src="img/морковь.webp" alt="Морковь">
         <h4>Морковь</h4>
         <p class="price">370 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
     </div>
@@ -126,9 +170,12 @@
         <img src="img/молоко.png" alt="Молоко">
         <h4>Молоко</h4>
         <p class="price">750 KZT/л</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -136,9 +183,12 @@
         <img src="img/сметана.webp" alt="Сметана">
         <h4>Сметана</h4>
         <p class="price">950 KZT/500г</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -146,9 +196,12 @@
         <img src="img/творог.jpeg" alt="Творог">
         <h4>Творог</h4>
         <p class="price">845 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -156,18 +209,23 @@
         <img src="img/сыр.jpg" alt="Сыр">
         <h4>Сыр</h4>
         <p class="price">1380 KZT/кг</p>
-        <form>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
     </div>
 
-    <h3>Корзина</h3>
-    <div class="product">
-      <p>Товаров в корзине: 0</p>
-      <p>Общая сумма: 0 KZT</p>
-      <button>Оформить заказ</button>
+    <div class="cart-section">
+      <h3>Корзина</h3>
+      <div class="cart-summary">
+        <p>Товаров в корзине: <span id="cartCount">0</span></p>
+        <p>Общая сумма: <span id="cartTotal">0</span> KZT</p>
+        <button class="checkout-btn">Оформить заказ</button>
+      </div>
     </div>
   </main>
 
