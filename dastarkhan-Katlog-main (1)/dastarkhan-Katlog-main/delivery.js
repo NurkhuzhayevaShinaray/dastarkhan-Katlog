@@ -11,12 +11,6 @@ $(document).ready(function(){
   });
 
 
-
-
-
-
-  
-
   
   $('#deliveryForm').on('submit', function(e){
     e.preventDefault();
@@ -80,5 +74,18 @@ $(document).ready(function(){
     );
   });
 
+
 });
+
+
+
+let currentMode = localStorage.getItem("mode") || "light";
+$("body").toggleClass("dark-mode", currentMode === "dark");
+
+$("#themeToggle").click(function(){
+  $("body").toggleClass("dark-mode");
+  let newMode = $("body").hasClass("dark-mode") ? "dark" : "light";
+  localStorage.setItem("mode", newMode);
+});
+
 
