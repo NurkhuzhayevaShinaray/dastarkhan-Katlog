@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Dastarkhan - Главная</title>
+
   <link rel="stylesheet" href="styleNurislam.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -29,6 +30,9 @@
           <a href="auth.html" class="btn-register">Зарегистрироваться</a>
         </div>
       </div>
+      <div class="theme-toggle">
+        <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+      </div>
     </header>
 
     <main>
@@ -36,12 +40,12 @@
         <aside class="sidebar">
           <h3>Категории товаров</h3>
           <ul>
-            <li><img data-src="imgMain/80x80-webp.webp" alt="Мясо" width="30" class="lazy"> <a href="#">Мясо</a></li>
-            <li><img data-src="imgMain/80x80-webp.webp" alt="Рыба и птица" width="30" class="lazy"> <a href="#">Рыба и птица</a></li>
-            <li><img data-src="imgMain/80x80-webp (1).webp" alt="Булки" width="30" class="lazy"> <a href="#">Булки и хлеб</a></li>
-            <li><img data-src="imgMain/80x80-webp (2).webp" alt="Молочные" width="30" class="lazy"> <a href="#">Молочные продукты</a></li>
-            <li><img data-src="imgMain/80x80-webp (3).webp" alt="Овощи" width="30" class="lazy"> <a href="#">Овощи</a></li>
-            <li><img data-src="imgMain/4023848.png" alt="Фрукты" width="30" class="lazy"> <a href="#">Фрукты</a></li>
+            <li><img data-src="imgMain/80x80-webp.webp" alt="Мясо" width="30" class="lazy"> <a href="catalog.html">Мясо</a></li>
+            <li><img data-src="imgMain/80x80-webp.webp" alt="Рыба и птица" width="30" class="lazy"> <a href="catalog.html">Рыба и птица</a></li>
+            <li><img data-src="imgMain/80x80-webp (1).webp" alt="Булки" width="30" class="lazy"> <a href="catalog.html">Булки и хлеб</a></li>
+            <li><img data-src="imgMain/80x80-webp (2).webp" alt="Молочные" width="30" class="lazy"> <a href="catalog.html">Молочные продукты</a></li>
+            <li><img data-src="imgMain/80x80-webp (3).webp" alt="Овощи" width="30" class="lazy"> <a href="catalog.html">Овощи</a></li>
+            <li><img data-src="imgMain/4023848.png" alt="Фрукты" width="30" class="lazy"> <a href="catalog.html">Фрукты</a></li>
           </ul>
         </aside>
 
@@ -191,7 +195,7 @@
                 <button class="copy-btn"><i class="fa fa-copy"></i> Copy</button>
               </div>
             </div>
-            <div style="text-align:center; margin-top:20px;">
+            <div style="text-align:center; margin-top:20px;" class="show-more">
               <a href="reviews.html" class="btn">Еще отзывы</a>
             </div>
           </section>
