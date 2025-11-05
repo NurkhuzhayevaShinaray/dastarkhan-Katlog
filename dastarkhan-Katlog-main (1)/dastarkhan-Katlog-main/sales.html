@@ -17,13 +17,16 @@
     <nav>
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
-      <a href="sales.html">Скидки</a>
+      <a href="sales.html" class="active">Скидки</a>
       <a href="Delivery.html">Доставка</a>
       <a href="reviews.html">Отзывы</a>
       <a href="contacts.html">Контакты</a>
       <a href="questions.html">Вопросы</a>
       <a href="auth.html">Авторизация</a>
     </nav>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <main>
@@ -37,23 +40,22 @@
       </button> </p>
       <div id="subscribeMessage" class="subscribe-message"></div>
     </div>
-   
 
     <section>
-      <h2  style="display:flex; align-items:center">Фруктовые скидки недели</h2>
+      <h2 style="display:flex; align-items:center">Фруктовые скидки недели</h2>
       <div class="content-wrapper">
         <aside class="sidebar">
           <h3>Фильтр скидок</h3>
           <ul>
-            <li><a href="#">До -10%</a></li>
-            <li><a href="#">До -30%</a></li>
-            <li><a href="#">До -50%</a></li>
-            <li><a href="#">Супер акции</a></li>
+            <li><a href="#" data-filter="10">До -10%</a></li>
+            <li><a href="#" data-filter="30">До -30%</a></li>
+            <li><a href="#" data-filter="50">До -50%</a></li>
+            <li><a href="#" data-filter="super">Супер акции</a></li>
           </ul>
         </aside>
 
         <div class="main-content">
-          <div class="sale-banner sale-orange">
+          <div class="sale-banner sale-orange" data-discount="20">
             <div>
               <h3>Бананы -20%</h3>
               <p><s>1180 ₸/кг</s> <strong>945 ₸/кг</strong></p>
@@ -61,7 +63,7 @@
             <img src="img/banana.webp" alt="Бананы">
           </div>
 
-          <div class="sale-banner sale-red">
+          <div class="sale-banner sale-red" data-discount="25">
             <div>
               <h3>Яблоки -25%</h3>
               <p><s>850 ₸/кг</s> <strong>680 ₸/кг</strong></p>
@@ -69,7 +71,7 @@
             <img src="img/apples.jpg" alt="Яблоки">
           </div>
 
-          <div class="sale-banner sale-green">
+          <div class="sale-banner sale-green" data-discount="15">
             <div>
               <h3>Арбузы -15%</h3>
               <p><s>880 ₸/кг</s> <strong>705 ₸/кг</strong></p>
@@ -77,7 +79,7 @@
             <img src="img/watermelon.avif" alt="Арбузы">
           </div>
 
-          <div class="sale-banner sale-purple">
+          <div class="sale-banner sale-purple" data-discount="18">
             <div>
               <h3>Апельсины -18%</h3>
               <p><s>1100 ₸/кг</s> <strong>900 ₸/кг</strong></p>
@@ -96,7 +98,7 @@
         <p class="price"><span class="old-price">3 850 KZT</span> 2 990 KZT</p>
         <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
 
@@ -106,7 +108,7 @@
         <p class="price"><span class="old-price">5 750 KZT</span> 4 590 KZT</p>
         <form class="product-form">
           <input type="number" min="1" value="1">
-          <button>В корзину</button>
+          <button type="submit">В корзину</button>
         </form>
       </div>
     </div>
@@ -117,6 +119,12 @@
       </div>
     </div>
 
+    <div class="sale-timer-section">
+      <button id="saleTimerBtn" class="sale-timer-btn">
+        <i class="fas fa-clock"></i> До конца акции осталось
+      </button>
+      <div id="timeDisplay" class="time-display"></div>
+    </div>
 
   </main>
 
