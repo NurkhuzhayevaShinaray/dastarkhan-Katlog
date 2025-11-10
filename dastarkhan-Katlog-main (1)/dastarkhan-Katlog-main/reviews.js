@@ -39,8 +39,18 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
 let currentMode = localStorage.getItem("mode") || "light";
 $("body").toggleClass("dark-mode", currentMode === "dark");
 
+function updateThemeIcon() {
+  if ($("body").hasClass("dark-mode")) {
+    $("#themeToggle").text("☀️"); 
+  } else {
+    $("#themeToggle").text("🌙"); 
+  }
+}
+updateThemeIcon();
+
 $("#themeToggle").click(function(){
   $("body").toggleClass("dark-mode");
   let newMode = $("body").hasClass("dark-mode") ? "dark" : "light";
   localStorage.setItem("mode", newMode);
+  updateThemeIcon();
 });
