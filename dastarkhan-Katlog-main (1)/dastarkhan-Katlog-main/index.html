@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dastarkhan - Главная</title>
-
   <link rel="stylesheet" href="styleNurislam.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,7 +14,13 @@
         <img data-src="img/photo_5359674248727231556_m.jpg" alt="Логотип" class="lazy">
         <h1>Dastarkhan</h1>
       </div>
-      <nav>
+
+      <!-- Бургер меню -->
+      <button class="burger" aria-label="Меню">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <nav class="nav-links">
         <a href="index.html">Главная</a>
         <a href="catalog.html">Каталог</a>
         <a href="sales.html">Скидки</a>
@@ -23,6 +29,7 @@
         <a href="contacts.html">Контакты</a>
         <a href="questions.html">Вопросы</a>
       </nav>
+
       <div class="logo">
         <div class="user-panel">
           <span class="user-icon"><img data-src="imgMain/Emblem-person-blue.svg.png" alt="Логотип" width="50" height="70" class="lazy"></span>
@@ -30,6 +37,7 @@
           <a href="auth.html" class="btn-register">Зарегистрироваться</a>
         </div>
       </div>
+
       <div class="theme-toggle">
         <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
       </div>
@@ -140,6 +148,7 @@
                 </form>
               </div>
             </div>
+
             <div class="show-more">
               <a href="catalog.html" class="btn">Смотреть весь каталог</a>
             </div>
@@ -210,5 +219,14 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Nurislam.js"></script>
+
+  <script>
+    // Бургер меню
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
