@@ -844,3 +844,287 @@ body.dark-mode {
 #theme-btn:hover {
   transform: scale(1.1);
 }
+/* === Адаптивность для всех устройств === */
+@media (max-width: 1200px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #008000;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .burger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .auth-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .auth-form input,
+  .auth-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  input, button { font-size: 14px; }
+}
+/* Контейнер страницы */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Контент */
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar и main-content */
+.sidebar {
+  flex: 0 0 230px; /* фиксированная ширина на ПК */
+}
+.main-content {
+  flex: 1;
+}
+
+/* Промо-карточки */
+.promo-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.promo {
+  width: 400px;
+  height: 200px;
+}
+
+.promo.small {
+  width: 220px;
+  height: 200px;
+}
+
+/* Продукты */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  width: 220px; /* фиксированная ширина на ПК */
+}
+
+/* ======================== */
+/* Адаптив для планшетов и телефонов */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column; /* sidebar под main-content */
+    gap: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .promo {
+    width: 100%;
+    height: auto;
+  }
+
+  .promo.small {
+    width: 100%;
+    height: auto;
+  }
+
+  .products-container {
+    justify-content: center;
+  }
+
+  .product {
+    width: 45%; /* 2 карточки в ряд на планшете */
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 100%; /* на телефоне карточка занимает всю ширину */
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+/* === Основной контейнер, чтобы на ПК и ноутбуке не изменялось === */
+.wrapper {
+  max-width: 100%; /* на ПК и ноутбуке ширина растягивается на весь экран */
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Чтобы на мобилках элементы переносились */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+/* Контент */
+.content-wrapper {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Sidebar и main-content на больших экранах */
+.sidebar {
+  flex: 0 0 230px; /* фиксированная ширина на ПК и ноутбуках */
+}
+.main-content {
+  flex: 1;
+}
+
+/* Промо-карточки */
+.promo-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.promo {
+  width: 400px;
+  height: 200px;
+}
+
+.promo.small {
+  width: 220px;
+  height: 200px;
+}
+
+/* Продукты */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  width: 220px; /* фиксированная ширина на ПК */
+}
+
+/* ======================== */
+/* Адаптив для планшетов и телефонов */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column; /* sidebar под main-content */
+    gap: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .promo {
+    width: 100%;
+    height: auto;
+  }
+
+  .promo.small {
+    width: 100%;
+    height: auto;
+  }
+
+  .products-container {
+    justify-content: center;
+  }
+
+  .product {
+    width: 45%; /* 2 карточки в ряд на планшете */
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .product {
+    width: 100%; /* на телефоне карточка занимает всю ширину */
+  }
+}
