@@ -13,19 +13,26 @@
       <img src="img/photo_5359674248727231556_m.jpg" alt="Логотип">
       <h1>Dastarkhan</h1>
     </div>
-    <div class="theme-toggle">
-        <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
-      </div>
-    <nav>
+
+    <!-- Бургер меню -->
+    <button class="burger" aria-label="Меню">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
-      <a href="discounts.html">Скидки</a>
+      <a href="sales.html">Скидки</a>
       <a href="delivery.html">Доставка</a>
       <a href="reviews.html">Отзывы</a>
       <a href="contacts.html">Контакты</a>
       <a href="questions.html">Вопросы</a>
       <a href="auth.html">Авторизация</a>
     </nav>
+
+    <div class="theme-toggle">
+      <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+    </div>
   </header>
 
   <main>
@@ -33,6 +40,7 @@
       <div class="user-icon">
         <i class="fa-solid fa-user"></i>
       </div>
+
       <h2>Регистрация</h2>
       <form class="auth-form">
         <label for="reg-username">Имя пользователя</label>
@@ -46,6 +54,7 @@
 
         <button type="submit">Зарегистрироваться</button>
       </form>
+
       <h2>Вход</h2>
       <form class="auth-form">
         <label for="login-username">Имя пользователя</label>
@@ -62,7 +71,17 @@
   <footer>
     <p>Сделано командой: Nurislam, Shinaray, Aidos, Akerke</p>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Nurislam.js"></script>
+
+  <script>
+    // Бургер меню
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
